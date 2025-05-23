@@ -6,3 +6,13 @@
 (Поиск максимина/минимакса. Удаление строго доминируемых стратегий)
 
 Ввод ,вывод данных в графическом интерфейсе
+
+
+TASK
+Software implementation of a (bi)matrix game-theoretic model
+(Support for matrix and bimatrix models)
+
+Implementation of rationalization and solution search algorithms
+(Search for maximin/minimax. Removal of strictly dominated strategies)
+
+Input, output of data in a graphical interface
