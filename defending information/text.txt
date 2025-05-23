@@ -20,3 +20,28 @@
 
     Библиотека	      ХЕШ- алгоритм	
   	Bouncy Castle	    SHA-3	ElGamal
+
+
+
+Here are the lab assignments for the course on information security.
+
+Lab2
+Task:
+1. Prepare a text file, the contents of which will be encrypted and decrypted in accordance with the assignment points.
+2. The developed application must:
+2.1. Encrypt the contents of a file, the name of which is entered from the keyboard, based on TWO cryptographic algorithms: symmetric and asymmetric.
+2.2. Decrypt the data of a file, the name of which is entered from the keyboard, based on TWO cryptographic algorithms: symmetric and asymmetric.
+3. The decrypted contents of the file must be displayed on the screen.
+
+Library, symmetric cipher algorithm Library, asymmetric cipher algorithm
+Crypto++, AES Botan, RSA
+
+Lab3
+Task:
+1. Study the material on hashing algorithms.
+2. Prepare a text file, the contents of which will be hashed in accordance with the points of the task.
+3. Using hashing algorithms, generate a hash and write them to the end of the file, the name of which is entered from the keyboard.
+4. Make changes to the original text file and ensure the ability to check the new hash with those written in the file, the name of which is entered from the keyboard.
+
+Library HASH algorithm
+Bouncy Castle SHA-3 ElGamal
