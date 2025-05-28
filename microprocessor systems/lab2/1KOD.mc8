@@ -1,0 +1,105 @@
+******* DMC8 Project File *******
+* If you read this message, you need to install the last version of Deeds! *
+FVR 2
+DMC 1
+ROM 3
+RAM 3
+POH 7
+POG 6
+POF 5
+POE 4
+POD 3
+POC 2
+POB 1
+POA 0
+PIH 7
+PIG 6
+PIF 5
+PIE 4
+PID 3
+PIC 2
+PIB 1
+PIA 0
+******* DMC8 Project File *******
+portA EQU 00
+portB EQU 01
+portC EQU 02
+portD EQU 03
+
+JP START
+
+ORG 38h
+JP INTERRUPT
+
+ORG 100h
+START:
+EI
+
+
+
+INF:
+JP INF
+
+RG_READ:
+
+  IN A, (portC)
+  OUT (portD), A
+
+  IN A, (portB)
+  OUT (portB), A
+
+
+
+
+  LD A, 001b
+  OUT (portA), A
+
+  IN A, (portA)
+  LD B, A
+
+  LD A, 010b
+  OUT (portA), A
+
+  IN A, (portA)
+  LD C, A
+
+  LD A, 011b
+  OUT (portA), A
+
+  IN A, (portA)
+  LD D, A
+
+ 
+
+  LD A, B
+  OUT (portC), A
+
+  LD A, 100b
+  OUT (portA), A
+
+ 
+
+  LD A, C
+  OUT (portC), A
+
+ LD A, 101b
+  OUT (portA), A
+
+  
+
+  LD A, D
+  OUT (portC), A
+
+LD A, 110b
+  OUT (portA), A
+
+  LD A, 000b
+  OUT (portA), A
+
+RET
+
+
+INTERRUPT:
+  CALL RG_READ
+EI
+RET
